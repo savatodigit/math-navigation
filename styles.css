@@ -140,3 +140,20 @@ footer{background:#0d2439;color:#9bb0c0;padding:20px 0;font-size:10px}
 .overview-arrow{position:absolute;right:17px;bottom:14px;color:#4c9bb8;font-size:15px}
 @media(max-width:900px){.hero{min-height:0;display:block}.hero-content{width:min(100% - 48px,680px);max-width:none;margin:0 auto;padding:58px 0 24px}.hero-visual{position:relative;top:auto;right:auto;transform:none;width:min(100% - 48px,680px);margin:0 auto 45px}.chart-scene{height:280px}.overview-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.hero-content{padding-top:44px}.hero-visual{padding:12px}.chart-scene{height:220px}.visual-topline{font-size:7px}.visual-data>div{padding:8px}.visual-data strong{font-size:14px}.overview-heading{display:block}.overview-heading>p{margin-top:8px}.overview-grid{grid-template-columns:1fr 1fr;gap:9px}.overview-card{min-height:165px;padding:13px}.overview-card strong{font-size:11px}}
+
+
+/* Use the uploaded complete hero artwork as a single responsive banner */
+.hero{
+  display:block;
+  min-height:0;
+  padding:0;
+  overflow:hidden;
+  background:#0b2d4a;
+}
+.hero-banner-image{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:none;
+  object-fit:contain;
+}
