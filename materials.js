@@ -1,4 +1,3 @@
-
 /*
   СПИСОК УЧЕБНЫХ МАТЕРИАЛОВ
 */
@@ -24,9 +23,15 @@ const materials = [
   },
   {
     title: "Кожухов — Математические основы судовождения",
-    category: "Курсовое проектирование",
+    category: "МАтериалы для подготовки к экзамену ЗФ",
     description: "Учебное пособие · PDF",
     file: "materials/Kozhukhov.Matematicheskie.Osnovy.Sudovozhdeniya.pdf"
+  },
+  {
+    title: "Шаблон для выполнения Курсовой Работы",
+    category: "Курсовое проектирование",
+    description: "Шаблон",
+    file: "Курсовая работа — шаблон 2026.docx"
   }
 ];
 
