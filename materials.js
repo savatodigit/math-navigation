@@ -6,7 +6,7 @@ const assignments = [
   {
     title: "Задания ЛР Очная форма 2025",
     category: "Лабораторные работы",
-    description: "Задания ЛР Очная форма 2025",
+    description: "Архив",
     file: "materials/ЗАДАНИЯ ЛР МОС 2025.zip"
   }
 ];
