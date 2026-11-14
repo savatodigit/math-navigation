@@ -20,6 +20,24 @@ const materials = [
     description: "Методические материалы · PDF",
     file: "materials/Методические+указания+по+курсовому+проекту+МОС.pdf"
   }
+  {
+    title: "Методические указания по лаюораторным работам",
+    category: "Курсовое проектирование",
+    description: "Методические материалы · PDF",
+    file: "materials/Васьков А.С., Мироненко А.А., Математические основы судовождения. Лабораторный практикум.pdf"
+  }
+  {
+    title: "МТ 2000",
+    category: "Курсовое проектирование",
+    description: "Методические материалы · PDF",
+    file: "materials/Morehodny'e Tablicy' - 2000.pdf"
+  }
+  {
+    title: "Кожухов МОС",
+    category: "Курсовое проектирование",
+    description: "Методические материалы · PDF",
+    file: "materials/Kozhukhov.Matematicheskie.Osnovy.Sudovozhdeniya.pdf"
+  }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
