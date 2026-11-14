@@ -187,3 +187,9 @@ footer{background:#0d2439;color:#9bb0c0;padding:20px 0;font-size:10px}
  .study-summary-text strong{font-size:17px}
  .study-summary-icon{width:43px;height:43px}
 }
+
+
+/* Assignment files section and inline navigation links */
+.assignments-section{background:#fff}
+.study-card-body a{color:#176b9b;font-weight:800;text-decoration:underline;text-decoration-color:#9bcddd;text-underline-offset:3px}
+.study-card-body a:hover{color:#0b4c75;text-decoration-color:currentColor}
