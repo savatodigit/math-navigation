@@ -2,6 +2,8 @@
   СПИСОК УЧЕБНЫХ МАТЕРИАЛОВ
 */
 
+const assignments = [];
+
 const materials = [
   {
     title: "Методические указания по курсовому проекту",
@@ -37,7 +39,34 @@ const materials = [
 
 document.addEventListener("DOMContentLoaded", () => {
   const list = document.getElementById("materials-list");
+  const assignmentsList = document.getElementById("assignments-list");
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  if (assignmentsList && assignments.length) {
+    assignmentsList.innerHTML = "";
+    assignments.forEach((item) => {
+      const card = document.createElement("article");
+      card.className = "material-card";
+      const icon = document.createElement("div");
+      icon.className = "file-icon";
+      const extension = (item.file.split(".").pop() || "FILE").toUpperCase();
+      icon.textContent = extension.length > 5 ? "FILE" : extension;
+      const info = document.createElement("div");
+      info.className = "material-info";
+      const title = document.createElement("h3");
+      title.textContent = item.title;
+      const description = document.createElement("p");
+      description.textContent = [item.category, item.description].filter(Boolean).join(" · ");
+      const link = document.createElement("a");
+      link.className = "download-link";
+      link.href = item.file;
+      link.setAttribute("download", "");
+      link.textContent = "Скачать ↓";
+      info.append(title, description, link);
+      card.append(icon, info);
+      assignmentsList.append(card);
+    });
+  }
 
   if (!materials.length) return;
 
