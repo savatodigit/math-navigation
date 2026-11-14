@@ -14,6 +14,12 @@
 */
 const materials = [
   // Добавляйте учебные файлы здесь.
+  {
+    title: "Методические указания по курсовому проекту",
+    category: "Курсовое проектирование",
+    description: "Методические материалы · PDF",
+    file: "materials/ТОЧНОЕ_ИМЯ_ФАЙЛА.pdf"
+  }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
