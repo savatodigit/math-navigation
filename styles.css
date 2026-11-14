@@ -193,3 +193,14 @@ footer{background:#0d2439;color:#9bb0c0;padding:20px 0;font-size:10px}
 .assignments-section{background:#fff}
 .study-card-body a{color:#176b9b;font-weight:800;text-decoration:underline;text-decoration-color:#9bcddd;text-underline-offset:3px}
 .study-card-body a:hover{color:#0b4c75;text-decoration-color:currentColor}
+
+
+/* Make the work-submission panel heading match study-form titles */
+.submission-panel strong{font-size:19px;line-height:1.3;font-weight:800}
+.submission-panel p{font-size:13px;line-height:1.6}
+.submission-panel>a{font-size:15px}
+@media(max-width:760px){
+  .submission-panel strong{font-size:17px}
+  .submission-panel p{font-size:12px}
+  .submission-panel>a{font-size:14px}
+}
