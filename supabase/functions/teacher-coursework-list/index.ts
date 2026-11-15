@@ -39,7 +39,7 @@ Deno.serve(async (req) => {
     }
 
     const [applicationsResult, studentsResult, variantsResult] = await Promise.all([
-      supabase.from("coursework_applications").select("*").order("application_no", { ascending: true }),
+      supabase.from("coursework_applications").select("*"),
       supabase.from("coursework_students").select("*"),
       supabase.from("coursework_variants").select("*").eq("is_active", true),
     ]);
@@ -63,6 +63,7 @@ Deno.serve(async (req) => {
       };
     });
 
+    applications.sort((x: any, y: any) => Number(x.application_no) - Number(y.application_no));
     const assigned = new Set(applications.map((a: any) => String(a.variant_no)).filter(Boolean));
     const activeVariantCount = (variantsResult.data || []).length;
 
