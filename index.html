@@ -38,11 +38,10 @@
 
 
     <section class="section" id="instructions">
-      <div class="container">
-        <div class="section-heading">
+      <div class="container"><details class="page-section-toggle"><summary><div class="section-heading">
           <div><div class="section-kicker">ПОРЯДОК РАБОТЫ</div><h2>Инструкция для студентов</h2></div>
           <p>Порядок получения заданий, выполнения лабораторных работ и курсового проекта для студентов очной и заочной форм обучения.</p>
-        </div>
+        </div><span class="page-section-chevron" aria-hidden="true">⌄</span></summary><div class="page-section-content">
 
         <div class="study-instructions">
           <details class="study-card">
@@ -115,13 +114,12 @@
       </div>
     </section>
 
-
+</div></details>
     <section class="section coursework-section" id="coursework-registration">
-      <div class="container">
-        <div class="section-heading">
+      <div class="container"><details class="page-section-toggle"><summary><div class="section-heading">
           <div><div class="section-kicker">КУРСОВОЕ ПРОЕКТИРОВАНИЕ</div><h2>Получение задания на курсовой проект</h2></div>
           <p>Регистрация предназначена для курсантов заочной формы обучения. После заполнения данных система автоматически назначит вариант курсового проекта.</p>
-        </div>
+        </div><span class="page-section-chevron" aria-hidden="true">⌄</span></summary><div class="page-section-content">
         <div class="coursework-audience-warning" role="note"><span class="coursework-warning-icon" aria-hidden="true">!</span><span><strong>ТОЛЬКО ДЛЯ КУРСАНТОВ ЗАОЧНОЙ ФОРМЫ ОБУЧЕНИЯ</strong><small>Студентам очной формы обучения регистрироваться здесь не нужно.</small></span></div>
         <div class="coursework-panel">
           <form id="coursework-form" class="coursework-form">
@@ -143,13 +141,12 @@
         </div>
       </div>
     </section>
-
+</div></details>
     <section class="section assignments-section" id="assignments">
-      <div class="container">
-        <div class="section-heading">
+      <div class="container"><details class="page-section-toggle"><summary><div class="section-heading">
           <div><div class="section-kicker">ФАЙЛЫ ДЛЯ ВЫПОЛНЕНИЯ</div><h2>Задания</h2></div>
           <p>Файлы индивидуальных заданий на лабораторные работы и курсовое проектирование.</p>
-        </div>
+        </div><span class="page-section-chevron" aria-hidden="true">⌄</span></summary><div class="page-section-content">
         <div id="assignments-list" class="materials-grid" aria-live="polite">
           <div class="empty-state">
             <div class="empty-icon">⇩</div>
@@ -159,13 +156,12 @@
         </div>
       </div>
     </section>
-
+</div></details>
     <section class="section materials-section" id="materials">
-      <div class="container">
-        <div class="section-heading">
+      <div class="container"><details class="page-section-toggle"><summary><div class="section-heading">
           <div><div class="section-kicker">БИБЛИОТЕКА КУРСА</div><h2>Учебные материалы</h2></div>
           <p>Скачивайте необходимые файлы. Новые материалы будут появляться в соответствующих разделах.</p>
-        </div>
+        </div><span class="page-section-chevron" aria-hidden="true">⌄</span></summary><div class="page-section-content">
         <div id="materials-list" class="materials-grid" aria-live="polite">
           <div class="empty-state">
             <div class="empty-icon">⇩</div>
@@ -176,7 +172,7 @@
         <p class="download-tip"><span>ⓘ</span> Для скачивания нажмите на название или кнопку «Скачать» рядом с материалом.</p>
       </div>
     </section>
-
+</div></details>
 
   </main>
 
@@ -190,5 +186,20 @@
 <footer><div class="container footer-inner"><span>© <span id="year"></span> Учебный портал</span><span>Морское образование · Точность · Профессионализм</span>
     </div>
   </footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+    link.addEventListener("click", () => {
+      const target = document.querySelector(link.getAttribute("href"));
+      const panel = target && target.querySelector(":scope > .container > .page-section-toggle");
+      if (panel) panel.open = true;
+      if (target && target.id === "teacher") {
+        const access = target.querySelector(".teacher-access");
+        if (access) access.open = true;
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
