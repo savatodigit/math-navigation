@@ -43,49 +43,45 @@
             <a href="#assignments"><span class="shortcut-symbol">⌖</span>Практические задания</a>
           </nav>
         </div>
-        <div class="hero-nautical-graphic hero-plot hero-plot-bearing" aria-hidden="true">
-          <svg viewBox="0 0 360 390" role="presentation">
+        <div class="hero-nautical-graphic hero-plot hero-position-plot" aria-hidden="true">
+          <svg viewBox="0 0 360 360" role="presentation">
             <defs>
-              <marker id="bearing-arrow" markerWidth="6" markerHeight="6" refX="4.5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#79bde0"/></marker>
-              <marker id="axis-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#d7edf2"/></marker>
+              <marker id="pos-axis-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#d8edf3"/></marker>
+              <marker id="pos-error-arrow" markerWidth="6" markerHeight="6" refX="4.5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#79c5e0"/></marker>
             </defs>
-            <g class="bearing-axes">
-              <path d="M180 370V26 M18 270H340" marker-end="url(#axis-arrow)"/>
-              <text x="160" y="22">N</text><text x="344" y="276">E</text>
+            <!-- Cardinal coordinate axes -->
+            <g class="position-axes">
+              <path d="M180 330V25 M25 180H335" marker-end="url(#pos-axis-arrow)"/>
+              <text x="180" y="17" text-anchor="middle">N</text>
+              <text x="180" y="350" text-anchor="middle">S</text>
+              <text x="345" y="185">E</text>
+              <text x="8" y="185">W</text>
             </g>
-            <g class="bearing-lines">
-              <path d="M180 270 L35 185 L8 135"/>
-              <path d="M180 270 L315 345"/>
-              <path d="M180 270 L270 62"/>
-              <path d="M180 270 L65 82"/>
-              <path d="M180 270 L220 58" class="bearing-n2"/>
-              <path d="M180 270 L220 58" class="bearing-n2-edge"/>
-              <path d="M220 58 L72 150"/>
-              <path d="M220 58 L326 270"/>
+            <!-- Two lines of position intersecting at the fix -->
+            <g class="position-lops">
+              <path d="M38 65 L322 295"/>
+              <path d="M38 300 L322 60"/>
             </g>
-            <g class="bearing-dimensions">
-              <path d="M195 270 A120 120 0 0 0 149 160" marker-end="url(#bearing-arrow)"/>
-              <path d="M180 270 A76 76 0 0 1 253 238" marker-end="url(#bearing-arrow)"/>
-              <path d="M220 58 H302 M302 58 V270 M220 270 H302" />
-              <path d="M205 100 V270 M198 100 H212 M198 270 H212"/>
-              <path d="M44 177 L110 292 M38 180 L50 173 M104 296 L116 288" marker-start="url(#bearing-arrow)" marker-end="url(#bearing-arrow)"/>
-              <text x="232" y="191">66,6°</text><text x="226" y="244">150,4°</text>
-              <text x="311" y="172" transform="rotate(90 311 172)">1,22</text>
-              <text x="67" y="242" transform="rotate(60 67 242)">1,08</text>
-              <text x="195" y="184">n₂</text><text x="236" y="246">n₁</text>
-              <text x="302" y="220">τ₁</text><text x="218" y="350">τ₂</text>
-              <text x="194" y="158">1 миля</text>
+            <!-- Error ellipse centered at the intersection -->
+            <g class="position-error">
+              <ellipse cx="180" cy="180" rx="59" ry="28" transform="rotate(-39 180 180)"/>
+              <path d="M180 180 L229 140" class="radial-error" marker-end="url(#pos-error-arrow)"/>
+              <path d="M180 180 L180 145 M180 180 L211 180" class="ellipse-guides"/>
+              <text x="226" y="133">mᵣ</text>
             </g>
-            <g class="bearing-ownship" transform="translate(220 58) rotate(65)">
-              <circle r="18" class="ownship-disc"/>
-              <path d="M0 -15 C9 -8 10 5 0 14 C-10 5 -9 -8 0 -15Z" class="ownship-body"/>
-              <path d="M0 -11 L0 12" class="ownship-axis"/>
+            <!-- Position fix -->
+            <g class="position-fix">
+              <circle cx="180" cy="180" r="8" class="fix-halo"/>
+              <circle cx="180" cy="180" r="3.5" class="fix-point"/>
             </g>
-            <g class="bearing-origin"><circle cx="180" cy="270" r="3.5"/></g>
-            <text class="bearing-coord" x="238" y="70">[φ₀; λ₀]</text>
+            <g class="position-labels">
+              <text x="48" y="76">ЛП 1</text>
+              <text x="274" y="77">ЛП 2</text>
+              <text x="194" y="202">Точка пересечения</text>
+            </g>
           </svg>
-          <span class="plot-caption">ПЕЛЕНГИ · КУРСЫ · РАССТОЯНИЯ</span>
-        </div> </div>
+          <span class="plot-caption">ЛИНИИ ПОЛОЖЕНИЯ · ЭЛЛИПС ПОГРЕШНОСТЕЙ</span>
+        </div>div>
     </section>
 
 
