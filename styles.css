@@ -262,3 +262,25 @@ footer{background:#0d2439;color:#9bb0c0;padding:20px 0;font-size:10px}
 .page-section-content{padding:26px 28px 30px}
 .page-section-content>.study-instructions{margin-top:0}
 @media(max-width:700px){.page-section-toggle>summary{padding:20px 48px 20px 18px}.page-section-toggle>summary .section-heading{display:block}.page-section-toggle>summary .section-heading p{margin-top:9px}.page-section-chevron{right:17px}.page-section-content{padding:18px}}
+
+
+/* Compact CSS-only portal banner */
+.hero-compact{min-height:0;padding:40px 0 38px;background:linear-gradient(112deg,#102b46 0%,#123d5e 68%,#15506c 100%);overflow:hidden}
+.hero-compact-inner{width:min(1120px,calc(100% - 48px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:28px;position:relative;min-height:188px}
+.hero-compact-copy{position:relative;z-index:1;max-width:720px}
+.hero-mark{display:inline-flex;align-items:center;justify-content:center;padding:5px 11px;border:1px solid #8ed6e766;border-radius:6px;color:#a8e6f0;font-size:13px;font-weight:800;letter-spacing:.18em}
+.hero-compact h1{max-width:690px;margin:14px 0 23px;font-size:clamp(28px,3.5vw,43px);line-height:1.15;letter-spacing:-.04em;color:#fff}
+.hero-shortcuts{display:flex;flex-wrap:wrap;gap:9px}
+.hero-shortcuts a{display:inline-flex;align-items:center;gap:8px;padding:8px 11px;border:1px solid #b6dce733;border-radius:7px;background:#ffffff0b;color:#e4f1f6;text-decoration:none;font-size:11px;font-weight:700;transition:background .2s,border-color .2s}
+.hero-shortcuts a:hover{background:#ffffff18;border-color:#9ce0ec99}
+.shortcut-symbol{color:#9ce0ec;font-size:17px;line-height:1}
+.hero-nautical-graphic{position:relative;flex:0 0 205px;width:205px;height:205px;display:grid;place-items:center;color:#9ce0ec;opacity:.85}
+.hero-nautical-graphic svg{position:relative;z-index:1;width:174px;height:174px;filter:drop-shadow(0 0 12px #7dd7e533)}
+.nautical-ring{position:absolute;border:1px solid #8ed6e744;border-radius:50%}
+.ring-outer{inset:0}.ring-inner{inset:19px;border-style:dashed;opacity:.8}
+.nautical-cross{position:absolute;width:1px;height:225px;background:#8ed6e72b;transform:rotate(45deg)}
+.nautical-label{position:absolute;font-size:9px;font-weight:800;letter-spacing:.1em;color:#b7eaf1}
+.label-n{top:7px}.label-e{right:8px}
+.nautical-coordinates{position:absolute;bottom:5px;font-size:7px;letter-spacing:.12em;color:#8dbaca}
+@media(max-width:760px){.hero-compact{padding:30px 0}.hero-compact-inner{width:calc(100% - 36px);min-height:0}.hero-nautical-graphic{flex-basis:120px;width:120px;height:120px;margin-right:-10px;opacity:.45}.hero-nautical-graphic svg{width:112px;height:112px}.nautical-cross{height:140px}.nautical-coordinates{font-size:6px}.hero-compact h1{font-size:clamp(25px,6vw,34px);margin:12px 0 18px}.hero-shortcuts{gap:7px}.hero-shortcuts a{font-size:10px;padding:7px 9px}}
+@media(max-width:520px){.hero-compact-inner{display:block}.hero-nautical-graphic{position:absolute;right:0;top:0;transform:translate(15px,-18px)}.hero-compact-copy{max-width:100%}.hero-shortcuts{max-width:390px}.hero-shortcuts a{background:#ffffff10}}
