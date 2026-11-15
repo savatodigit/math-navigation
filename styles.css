@@ -249,3 +249,16 @@ footer{background:#0d2439;color:#9bb0c0;padding:20px 0;font-size:10px}
 .coursework-audience-warning strong{display:block;font-size:clamp(15px,2vw,20px);line-height:1.35;font-weight:900;letter-spacing:.01em}
 .coursework-audience-warning small{display:block;margin-top:5px;font-size:12px;line-height:1.5;color:#8e4035}
 @media(max-width:600px){.coursework-audience-warning{padding:15px;gap:12px}.coursework-warning-icon{width:36px;height:36px;flex-basis:36px;font-size:23px}.coursework-audience-warning strong{font-size:15px}}
+
+/* Collapsible main page sections: closed on initial load */
+.page-section-toggle{border:1px solid #dce6ed;border-radius:16px;background:#fff;overflow:hidden;box-shadow:0 8px 28px rgba(16,43,70,.045)}
+.page-section-toggle>summary{list-style:none;cursor:pointer;position:relative;padding:26px 64px 26px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:#fff}
+.page-section-toggle>summary::-webkit-details-marker{display:none}
+.page-section-toggle>summary .section-heading{width:100%;margin:0;align-items:center}
+.page-section-toggle>summary .section-heading p{margin:0}
+.page-section-chevron{position:absolute;right:28px;top:50%;transform:translateY(-50%);font-size:25px;color:#2d759a;transition:transform .2s}
+.page-section-toggle[open]>summary{border-bottom:1px solid #e4edf2;background:#f8fbfd}
+.page-section-toggle[open]>summary .page-section-chevron{transform:translateY(-50%) rotate(180deg)}
+.page-section-content{padding:26px 28px 30px}
+.page-section-content>.study-instructions{margin-top:0}
+@media(max-width:700px){.page-section-toggle>summary{padding:20px 48px 20px 18px}.page-section-toggle>summary .section-heading{display:block}.page-section-toggle>summary .section-heading p{margin-top:9px}.page-section-chevron{right:17px}.page-section-content{padding:18px}}
