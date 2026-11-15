@@ -43,20 +43,44 @@
             <a href="#assignments"><span class="shortcut-symbol">⌖</span>Практические задания</a>
           </nav>
         </div>
-        <div class="hero-nautical-graphic" aria-hidden="true">
-          <div class="nautical-ring ring-outer"></div>
-          <div class="nautical-ring ring-inner"></div>
-          <div class="nautical-cross"></div>
-          <svg viewBox="0 0 220 220" role="presentation">
-            <circle cx="110" cy="110" r="4" fill="#9ce0ec"/>
-            <path d="M110 25 L124 96 L195 110 L124 124 L110 195 L96 124 L25 110 L96 96 Z" fill="none" stroke="#9ce0ec" stroke-width="1.5"/>
-            <path d="M110 52 L119 101 L168 110 L119 119 L110 168 L101 119 L52 110 L101 101 Z" fill="#75c6dc" fill-opacity=".18" stroke="#75c6dc" stroke-width="1"/>
-            <path d="M110 75 L119 110 L110 145 L101 110 Z" fill="#b5edf4"/>
+        <div class="hero-nautical-graphic hero-plot" aria-hidden="true">
+          <svg viewBox="0 0 360 300" role="presentation">
+            <defs>
+              <marker id="plot-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7 Z" fill="#79c5e0"/></marker>
+              <marker id="ship-tip" markerWidth="6" markerHeight="6" refX="4" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#d6f2f5"/></marker>
+            </defs>
+            <g class="plot-grid">
+              <path d="M20 150H340 M180 12V288" />
+              <circle cx="180" cy="150" r="42"/><circle cx="180" cy="150" r="86"/><circle cx="180" cy="150" r="132"/>
+            </g>
+            <g class="plot-axes">
+              <path d="M180 278V18 M26 150H345" marker-end="url(#plot-arrow)"/>
+              <text x="180" y="12" text-anchor="middle">N</text><text x="350" y="155">E</text>
+            </g>
+            <g class="plot-courses">
+              <path d="M35 54 L302 235" />
+              <path d="M42 236 L316 92" />
+              <path d="M104 20 L226 282" />
+              <path d="M180 150 L302 235" class="plot-course-main"/>
+              <path d="M180 150 L316 92" class="plot-course-secondary"/>
+            </g>
+            <g class="plot-bearings">
+              <path d="M180 42 A108 108 0 0 1 278 196" marker-end="url(#plot-arrow)"/>
+              <path d="M180 70 A80 80 0 0 0 108 183" marker-end="url(#plot-arrow)"/>
+              <path d="M180 150 L278 196 M180 150 L108 183" />
+              <text x="245" y="78">34°</text><text x="78" y="205">128°</text>
+            </g>
+            <g class="plot-ships">
+              <g transform="translate(180 150)"><circle r="10" class="ownship-halo"/><path d="M0 -15 L6 7 L0 4 L-6 7 Z" class="ownship"/><circle r="2.5" class="ownship-dot"/></g>
+              <g transform="translate(35 54) rotate(124)"><path d="M0 -10 L4 5 L0 3 L-4 5 Z" class="target-ship"/></g>
+              <g transform="translate(302 235) rotate(124)"><path d="M0 -10 L4 5 L0 3 L-4 5 Z" class="target-ship"/></g>
+              <g transform="translate(316 92) rotate(250)"><path d="M0 -10 L4 5 L0 3 L-4 5 Z" class="target-ship"/></g>
+              <g transform="translate(104 20) rotate(155)"><path d="M0 -10 L4 5 L0 3 L-4 5 Z" class="target-ship"/></g>
+            </g>
+            <g class="plot-labels"><text x="18" y="42">3.5 kn</text><text x="285" y="254">31.6 kn</text><text x="22" y="252">CPA</text><text x="205" y="177">O</text></g>
           </svg>
-          <span class="nautical-label label-n">N</span><span class="nautical-label label-e">E</span>
-          <span class="nautical-coordinates">55°45′ N&nbsp;&nbsp; 37°37′ E</span>
-        </div>
-      </div>
+          <span class="plot-caption">NAVIGATION PLOT · RELATIVE MOTION</span>
+        </div>    </div>
     </section>
 
 
