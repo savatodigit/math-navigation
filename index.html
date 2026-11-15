@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="styles.css">
   <script src="materials.js" defer></script>
   <script src="coursework.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="teacher.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -178,10 +180,14 @@
 
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Учебный портал</span>
-      <span>Морское образование · Точность · Профессионализм</span>
+  <section class="teacher-area" id="teacher"><div class="container"><details class="teacher-access"><summary>Кабинет преподавателя <span>Закрытый доступ</span></summary><div class="teacher-access-body">
+<form id="teacher-login-form" class="teacher-login-form"><label>Логин (электронная почта)<input name="email" type="email" autocomplete="username" required></label><label>Пароль<input name="password" type="password" autocomplete="current-password" required></label><button class="coursework-submit" type="submit">Войти в кабинет <span aria-hidden="true">→</span></button><p id="teacher-login-message" class="teacher-message" role="status" aria-live="polite"></p></form>
+<div id="teacher-dashboard" hidden><div class="teacher-dashboard-top"><div><strong>Распределение курсовых проектов</strong><p id="teacher-account-label"></p></div><button type="button" id="teacher-logout" class="teacher-logout">Выйти</button></div>
+<div class="teacher-stats"><div><strong id="teacher-total">—</strong><span>Заявок</span></div><div><strong id="teacher-used">—</strong><span>Назначено вариантов</span></div><div><strong id="teacher-free">—</strong><span>Свободно вариантов</span></div></div>
+<div class="teacher-tools"><input id="teacher-search" type="search" placeholder="Поиск: фамилия, группа, зачётная книжка"><button type="button" id="teacher-export" class="teacher-export">Выгрузить CSV для Excel</button></div>
+<div class="teacher-table-wrap"><table class="teacher-table"><thead><tr><th>№ заявки</th><th>Фамилия, имя, отчество</th><th>Группа</th><th>Зачётная книжка</th><th>Вариант</th><th>Дата регистрации</th></tr></thead><tbody id="teacher-table-body"><tr><td colspan="6">Загрузка данных…</td></tr></tbody></table></div><p id="teacher-dashboard-message" class="teacher-message" role="status" aria-live="polite"></p></div>
+</div></details></div></section>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> Учебный портал</span><span>Морское образование · Точность · Профессионализм</span>
     </div>
   </footer>
 </body>
