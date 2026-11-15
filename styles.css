@@ -284,3 +284,25 @@ footer{background:#0d2439;color:#9bb0c0;padding:20px 0;font-size:10px}
 .nautical-coordinates{position:absolute;bottom:5px;font-size:7px;letter-spacing:.12em;color:#8dbaca}
 @media(max-width:760px){.hero-compact{padding:30px 0}.hero-compact-inner{width:calc(100% - 36px);min-height:0}.hero-nautical-graphic{flex-basis:120px;width:120px;height:120px;margin-right:-10px;opacity:.45}.hero-nautical-graphic svg{width:112px;height:112px}.nautical-cross{height:140px}.nautical-coordinates{font-size:6px}.hero-compact h1{font-size:clamp(25px,6vw,34px);margin:12px 0 18px}.hero-shortcuts{gap:7px}.hero-shortcuts a{font-size:10px;padding:7px 9px}}
 @media(max-width:520px){.hero-compact-inner{display:block}.hero-nautical-graphic{position:absolute;right:0;top:0;transform:translate(15px,-18px)}.hero-compact-copy{max-width:100%}.hero-shortcuts{max-width:390px}.hero-shortcuts a{background:#ffffff10}}
+
+/* Vector navigation plot in the hero */
+.hero-compact-inner{gap:18px}
+.hero-compact-copy{max-width:690px}
+.hero-plot{flex:0 0 330px;width:330px;height:280px;display:flex;align-items:center;justify-content:center;opacity:1;overflow:visible}
+.hero-plot svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 5px 12px #061a2b55)}
+.hero-plot .plot-grid path,.hero-plot .plot-grid circle{fill:none;stroke:#8bc9dc;stroke-opacity:.18;stroke-width:1}
+.hero-plot .plot-axes path{fill:none;stroke:#b4ddea;stroke-opacity:.72;stroke-width:1.1}
+.hero-plot .plot-axes text{fill:#d7f2f5;font: bold 12px Manrope,Arial,sans-serif}
+.hero-plot .plot-courses path{fill:none;stroke:#d7edf2;stroke-width:1.7;stroke-opacity:.78}
+.hero-plot .plot-courses .plot-course-main{stroke:#9ce0ec;stroke-width:2.2;stroke-opacity:1}
+.hero-plot .plot-courses .plot-course-secondary{stroke:#8bc9dc;stroke-dasharray:5 4;stroke-width:1.8}
+.hero-plot .plot-bearings path{fill:none;stroke:#79c5e0;stroke-width:1.35;stroke-opacity:.9}
+.hero-plot .plot-bearings text{fill:#9bd8e8;font:italic 12px Manrope,Arial,sans-serif}
+.hero-plot .ownship-halo{fill:#9ce0ec;fill-opacity:.13;stroke:#9ce0ec;stroke-opacity:.65}
+.hero-plot .ownship{fill:#f4fbfc;stroke:#9ce0ec;stroke-width:1.1}
+.hero-plot .ownship-dot{fill:#4eb5d0}
+.hero-plot .target-ship{fill:#d9edf2;stroke:#8ed6e7;stroke-width:1}
+.hero-plot .plot-labels text{fill:#a7cbd8;font:10px Manrope,Arial,sans-serif}
+.plot-caption{position:absolute;bottom:0;left:50%;transform:translateX(-50%);white-space:nowrap;color:#8bb9ca;font-size:7px;font-weight:800;letter-spacing:.15em}
+@media(max-width:760px){.hero-plot{position:absolute;right:-22px;top:0;flex-basis:190px;width:190px;height:180px;margin:0;opacity:.42}.hero-plot svg{width:100%;height:100%}.plot-caption{font-size:5px}.hero-compact-copy{max-width:100%}}
+@media(max-width:520px){.hero-plot{right:-24px;top:-5px;width:150px;height:145px;opacity:.28}.hero-compact h1{max-width:330px}}
