@@ -204,3 +204,13 @@ footer{background:#0d2439;color:#9bb0c0;padding:20px 0;font-size:10px}
   .submission-panel p{font-size:12px}
   .submission-panel>a{font-size:14px}
 }
+
+
+/* Email address and required email subject format in the submission panel */
+.submission-panel>a{font-size:30px}
+.submission-subject-note{font-size:12px;line-height:1.55;color:#d5e5ee;margin:8px 0 0}
+.submission-subject-note strong{font-size:inherit;color:#fff}
+@media(max-width:760px){
+  .submission-panel>a{font-size:28px;white-space:normal;overflow-wrap:anywhere;margin-left:0}
+  .submission-subject-note{font-size:12px}
+}
