@@ -306,3 +306,23 @@ footer{background:#0d2439;color:#9bb0c0;padding:20px 0;font-size:10px}
 .plot-caption{position:absolute;bottom:0;left:50%;transform:translateX(-50%);white-space:nowrap;color:#8bb9ca;font-size:7px;font-weight:800;letter-spacing:.15em}
 @media(max-width:760px){.hero-plot{position:absolute;right:-22px;top:0;flex-basis:190px;width:190px;height:180px;margin:0;opacity:.42}.hero-plot svg{width:100%;height:100%}.plot-caption{font-size:5px}.hero-compact-copy{max-width:100%}}
 @media(max-width:520px){.hero-plot{right:-24px;top:-5px;width:150px;height:145px;opacity:.28}.hero-compact h1{max-width:330px}}
+
+/* Bearing and relative-position diagram, inspired by the supplied reference */
+.hero-plot-bearing{flex:0 0 340px;width:340px;height:360px;opacity:1;overflow:visible}
+.hero-plot-bearing svg{width:100%;height:100%;overflow:visible}
+.hero-plot-bearing text{font-family:Manrope,Arial,sans-serif}
+.hero-plot-bearing .bearing-axes path{fill:none;stroke:#d6edf4;stroke-width:1.1;opacity:.85}
+.hero-plot-bearing .bearing-axes text{fill:#effbfc;font-size:18px;font-weight:600}
+.hero-plot-bearing .bearing-lines path{fill:none;stroke:#c5dce5;stroke-width:1.1;opacity:.78}
+.hero-plot-bearing .bearing-lines .bearing-n2{stroke:#e8f5f7;stroke-width:3.2;opacity:1}
+.hero-plot-bearing .bearing-lines .bearing-n2-edge{stroke:#6fbad8;stroke-width:.8;opacity:.95}
+.hero-plot-bearing .bearing-dimensions path{fill:none;stroke:#79bde0;stroke-width:1.15;opacity:.95}
+.hero-plot-bearing .bearing-dimensions text{fill:#8bc9e7;font-size:11px;font-style:italic}
+.hero-plot-bearing .bearing-dimensions text:nth-of-type(n+5){fill:#d9edf3;font-size:12px;font-style:normal}
+.hero-plot-bearing .ownship-disc{fill:#f1d72e;stroke:#e7c821;stroke-width:1}
+.hero-plot-bearing .ownship-body{fill:#ed392d;stroke:#9c2828;stroke-width:1}
+.hero-plot-bearing .ownship-axis{stroke:#7b2727;stroke-width:1.2}
+.hero-plot-bearing .bearing-origin circle{fill:#e5f5f8}
+.hero-plot-bearing .bearing-coord{fill:#effbfc;font-size:17px;font-family:Georgia,serif}
+@media(max-width:760px){.hero-plot-bearing{position:absolute;right:-24px;top:-10px;flex:0 0 220px;width:220px;height:245px;opacity:.4}.hero-plot-bearing .plot-caption{font-size:5px}}
+@media(max-width:520px){.hero-plot-bearing{right:-32px;top:-8px;width:170px;height:190px;opacity:.28}}
