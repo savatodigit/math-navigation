@@ -344,7 +344,7 @@ footer{background:#0d2439;color:#9bb0c0;padding:20px 0;font-size:10px}
 @media(max-width:760px){.hero-position-plot{position:absolute;right:-20px;top:-5px;flex:0 0 220px;width:220px;height:230px;opacity:.42}.hero-position-plot .plot-caption{font-size:5px}}
 @media(max-width:520px){.hero-position-plot{right:-26px;top:-5px;width:165px;height:175px;opacity:.28}}
 
-.hero-position-plot .position-perpendiculars path{fill:none;stroke:#35c66b;stroke-width:1.5;stroke-dasharray:none;opacity:1}\n.hero-position-plot .position-perpendiculars .normal-label{fill:#35c66b;font-size:10px;font-style:normal;font-weight:600}\n.hero-position-plot .position-perpendiculars .normal-index{font-size:6px}
+.hero-position-plot .position-perpendiculars path{fill:none;stroke:#35c66b;stroke-width:1.5;stroke-dasharray:none;opacity:1}\n.hero-position-plot .position-perpendiculars .normal-label{fill:#35c66b;font-size:10px;font-style:normal;font-weight:600}\n.hero-position-plot .position-perpendiculars .normal-index{font-size:5px;fill:#ffffff}
 
 /* Curved central line through the position-error ellipse */
 .hero-position-plot .ellipse-centerline{fill:none;stroke:#ef2929;stroke-width:1.2;stroke-linecap:round;opacity:1}
