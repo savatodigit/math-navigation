@@ -334,7 +334,7 @@ footer{background:#0d2439;color:#9bb0c0;padding:20px 0;font-size:10px}
 .hero-position-plot .position-axes path{fill:none;stroke:#d8edf3;stroke-width:1.15;opacity:.9}
 .hero-position-plot .position-axes text{fill:#f0fafc;font-size:14px;font-weight:700}
 .hero-position-plot .position-lops path{fill:none;stroke:#d9e9ed;stroke-width:1.4;opacity:.9}
-.hero-position-plot .position-error ellipse{fill:#70bfe0;fill-opacity:.12;stroke:#79c5e0;stroke-width:1.8;stroke-dasharray:5 3}
+.hero-position-plot .position-error ellipse{fill:#70bfe0;fill-opacity:.12;stroke:#4b9bd3;stroke-width:1.8;stroke-dasharray:none}
 .hero-position-plot .position-error .radial-error{fill:none;stroke:#79c5e0;stroke-width:1.8;stroke-dasharray:4 2}
 .hero-position-plot .position-error .ellipse-guides{fill:none;stroke:#79c5e0;stroke-width:1;stroke-opacity:.6;stroke-dasharray:2 3}
 .hero-position-plot .position-error text{fill:#9bd9ee;font-size:13px;font-style:italic;font-weight:700}
