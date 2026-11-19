@@ -343,3 +343,5 @@ footer{background:#0d2439;color:#9bb0c0;padding:20px 0;font-size:10px}
 .hero-position-plot .position-labels text{fill:#d7edf3;font-size:10px}
 @media(max-width:760px){.hero-position-plot{position:absolute;right:-20px;top:-5px;flex:0 0 220px;width:220px;height:230px;opacity:.42}.hero-position-plot .plot-caption{font-size:5px}}
 @media(max-width:520px){.hero-position-plot{right:-26px;top:-5px;width:165px;height:175px;opacity:.28}}
+
+.hero-position-plot .position-perpendiculars path{fill:none;stroke:#8bc9e7;stroke-width:1.5;stroke-dasharray:3 4;opacity:.9}
